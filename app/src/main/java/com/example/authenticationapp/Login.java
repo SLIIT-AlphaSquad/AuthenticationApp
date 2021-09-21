@@ -97,7 +97,7 @@ public class Login extends AppCompatActivity {
                 EditText resetEmail = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
                 passwordResetDialog.setTitle("Reset password?");
-                passwordResetDialog.setMessage("Enter your password to the received reset link");
+                passwordResetDialog.setMessage("Enter your Email to receive reset link");
                 passwordResetDialog.setView(resetEmail);
 
                 passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {

@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_login.xml" value="0.19746376811594202" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_register.xml" value="0.19746376811594202" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/header.xml" value="0.20833333333333334" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/menu/main_menu.xml" value="0.22" />
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_login.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_main.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_register.xml" value="0.25" />
