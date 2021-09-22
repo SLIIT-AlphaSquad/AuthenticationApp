@@ -14,31 +14,42 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 //import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Button resendCode;
+    /*Button resendCode;
     TextView verifyMsg;
     String userId;
     FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
+    FirebaseFirestore fStore;*/
+
     //Home side menuBar
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    /*Todolist
+    private EditText mTitle, mDesc;
+    private Button mSaveBtn, mShowBtn;*/
 
 
     @Override
@@ -69,16 +80,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch(menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         return true;
 
                     case R.id.nav_logout:
 
                         FirebaseAuth.getInstance().signOut();
-                        startActivity(new Intent(getApplicationContext(),Login.class));
+                        startActivity(new Intent(getApplicationContext(), Login.class));
                         finish();
+                        return true;
+
+                    case R.id.nav_todo:
+                        startActivity(new Intent(MainActivity.this, todo_list.class));
+                        //finish();
                         return true;
 
                 }
@@ -86,40 +102,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        fAuth=FirebaseAuth.getInstance();
-        fStore=FirebaseFirestore.getInstance();
 
-        resendCode = findViewById(R.id.resendCode);
-        verifyMsg = findViewById(R.id.verifyMsg);
 
-        userId = fAuth.getCurrentUser().getUid();
-       final FirebaseUser user = fAuth.getCurrentUser();
 
-        if(!user.isEmailVerified()){
-            verifyMsg.setVisibility(View.VISIBLE);
-            resendCode.setVisibility(View.VISIBLE);
 
-            resendCode.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(v.getContext(), "Verification email has sent", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),Login.class));
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.d("tag","onFailure: Email not sent "+e.getMessage());
-                        }
-                    });
-                }
-            });
-        }
     }
-
     public void donatepet(View view){
         Intent intent = new Intent(MainActivity.this,DonatePet_Activity.class);
         startActivity(intent);

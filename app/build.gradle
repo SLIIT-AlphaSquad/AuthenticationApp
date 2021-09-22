@@ -48,4 +48,6 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.orhanobut:dialogplus:1.11@aar'
 
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
+
 }

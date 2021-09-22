@@ -108,19 +108,9 @@ public class Register extends AppCompatActivity {
 
 
                                 Toast.makeText(Register.this,"User created",Toast.LENGTH_SHORT).show();
-                                /*userID = fAuth.getCurrentUser().getUid();
-                                DocumentReference documentReference=fStore.collection("users").document(userID);
-                                Map<String,Object> user= new HashMap<>();
-                                user.put("fName",fullName);
-                                user.put("email",email);
-                                user.put("phone",phone);
-                                documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) ->{
-                                    Log.d(TAG,"onSuccess user profile is created for "+userID);
-                                }).addOnFailureListener((e)->{
-                                    Log.d(TAG,"onFailure: "+e.toString());
-                                });*/
 
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class)); //Main activity is the home
+
+                                startActivity(new Intent(getApplicationContext(),verification.class)); //Main activity is the home
                             }else{
                                 Toast.makeText(Register.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);

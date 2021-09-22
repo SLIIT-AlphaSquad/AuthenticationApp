@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthenticationApp">
         <activity
+            android:name=".verification"
+            android:exported="true" />
+        <activity
+            android:name=".ShowActivity"
+            android:exported="true" />
+        <activity
+            android:name=".todo_list"
+            android:exported="true" />
+        <activity
             android:name=".DonatePet_Activity"
             android:exported="true" />
         <activity
@@ -25,13 +34,12 @@
         </activity>
         <activity
             android:name=".Register"
-            android:exported="true"></activity>
+            android:exported="true"/>
 
         <activity
             android:name=".RecycleViewList"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
