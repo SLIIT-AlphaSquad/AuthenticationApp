@@ -157,6 +157,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="donatepet"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/pets1"
                     tools:ignore="SpeakableTextPresentCheck" />

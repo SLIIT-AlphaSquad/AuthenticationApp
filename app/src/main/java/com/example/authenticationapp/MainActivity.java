@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String userId;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-
     //Home side menuBar
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -74,12 +74,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         return true;
 
-                    case R.id.nav_login:
-                        startActivity(new Intent(getApplicationContext(),Register.class));
-                        return true;
-
                     case R.id.nav_logout:
+
+                        FirebaseAuth.getInstance().signOut();
                         startActivity(new Intent(getApplicationContext(),Login.class));
+                        finish();
                         return true;
 
                 }
@@ -108,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(v.getContext(), "Verification email has sent", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),Login.class));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -119,6 +119,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             });
         }
     }
+
+    public void donatepet(View view){
+        Intent intent = new Intent(MainActivity.this,DonatePet_Activity.class);
+        startActivity(intent);
+    }
+
+
 
    /* public void logout(View view){
         FirebaseAuth.getInstance().signOut();

@@ -50,7 +50,7 @@ public class Register extends AppCompatActivity {
         mPassword=findViewById(R.id.password);
         mPhone=findViewById(R.id.phone);
         mRegisterBtn=findViewById(R.id.loginBtn);
-        mLoginBtn=findViewById(R.id.textView3);
+        mLoginBtn=findViewById(R.id.textView4);
 
         fAuth=FirebaseAuth.getInstance();
         //fStore=FirebaseFirestore.getInstance();
@@ -133,7 +133,7 @@ public class Register extends AppCompatActivity {
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Login.class));
             }
         });
