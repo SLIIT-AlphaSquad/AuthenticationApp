@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="CourseID"
+        android:hint="Description"
         android:inputType="textPersonName" />
 
     <EditText
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="CourseName"
+        android:hint="Category (Ex:Dog)"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="CourseFee"
+        android:hint="Telephone number"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="CourseDuration"
+        android:hint="Price"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
 

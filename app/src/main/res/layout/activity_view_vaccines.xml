@@ -8,6 +8,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,18 +56,33 @@
 
     <Button
         android:id="@+id/btn_addvaccines"
-        android:layout_width="43dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
-        android:text="+"
-        android:clickable="true"
         android:layout_marginBottom="36dp"
+        android:clickable="true"
+        android:text="+"
         app:backgroundTint="#FF7F7F"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vaccine_rv"
-        app:layout_constraintVertical_bias="1.0"
+
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/backHome"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="350dp"
+        android:backgroundTint="@color/inputbg"
+        android:text="Home"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

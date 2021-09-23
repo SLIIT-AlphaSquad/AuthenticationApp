@@ -39,6 +39,23 @@
             android:name=".DonatePet_Activity"
             android:exported="true" />
         <activity
+            android:name=".Medicine_Activity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Food_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Equipment_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Toy_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Wanted_Activity"
+            android:exported="true" />
+
+        <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>
@@ -50,10 +67,37 @@
         <activity
             android:name=".Register"
             android:exported="true" />
+
         <activity
             android:name=".RecycleViewList"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".RecycleViewMedicine"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".RecycleViewFood"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".RecyclerViewEquipment"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".RecyclerViewYoy"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".RecyclerViewWanted"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RecycleViewList extends AppCompatActivity {
+public class RecycleViewFood extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    PostAdapter adapter;
+    PostFoodAdapter adapter;
     SearchView searchView;
 
 
@@ -26,7 +26,7 @@ public class RecycleViewList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycle_view_list);
+        setContentView(R.layout.activity_recycle_view_food);
 
         recyclerView =findViewById(R.id.recyclerView_id);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -35,17 +35,17 @@ public class RecycleViewList extends AppCompatActivity {
 
         FirebaseRecyclerOptions<PostModel> options= new FirebaseRecyclerOptions.Builder<PostModel>()
                 .setQuery(FirebaseDatabase.getInstance()
-                        .getReference().child("Pet"),PostModel.class)
+                        .getReference().child("Food"),PostModel.class)
                 .build();
 
 
-        adapter=new PostAdapter(options,this);
+        adapter=new PostFoodAdapter(options,this);
         recyclerView.setAdapter(adapter);
     }
 
-    public void addPet(View view){
-        Intent intent1 = new Intent(RecycleViewList.this, DonatePet_Activity.class);
-        startActivity(intent1);
+    public void AddFood(View view){
+        Intent intent = new Intent(RecycleViewFood.this, Food_Activity.class);
+        startActivity(intent);
     }
 
 
@@ -86,11 +86,11 @@ public class RecycleViewList extends AppCompatActivity {
     private void searchData(String s){
         FirebaseRecyclerOptions<PostModel> options= new FirebaseRecyclerOptions.Builder<PostModel>()
                 .setQuery(FirebaseDatabase.getInstance()
-                        .getReference().child("Pet").orderByChild("Category").startAt(s.toUpperCase()).endAt(s.toLowerCase()+"\ufaff"),PostModel.class)
+                        .getReference().child("Food").orderByChild("Category").startAt(s.toUpperCase()).endAt(s.toLowerCase()+"\ufaff"),PostModel.class)
                 .build();
 
 
-        adapter=new PostAdapter(options,this);
+        adapter=new PostFoodAdapter(options,this);
         recyclerView.setAdapter(adapter);
 
         adapter.startListening();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecycleViewList">
+    tools:context=".RecyclerViewWanted">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_id"
@@ -29,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:clickable="true"
-        android:onClick="addPet"
+
+        android:onClick="AddWanted"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"

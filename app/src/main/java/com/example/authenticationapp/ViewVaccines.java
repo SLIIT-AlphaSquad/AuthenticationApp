@@ -32,7 +32,7 @@ public class ViewVaccines extends AppCompatActivity {
     private VaccineAdapter vaccineAdapter;
     private List<VaccineModel> list;
 
-    Button btn_addvaccines;
+    Button btn_addvaccines,backHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,20 @@ public class ViewVaccines extends AppCompatActivity {
         setContentView(R.layout.activity_view_vaccines);
 
         btn_addvaccines = findViewById(R.id.btn_addvaccines);
+        backHome = findViewById(R.id.backHome);
+
 
         btn_addvaccines.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addVaccines();
+            }
+        });
+
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backtoHome();
             }
         });
 
@@ -67,6 +76,13 @@ public class ViewVaccines extends AppCompatActivity {
         Intent intent = new Intent(ViewVaccines.this, Vaccination.class);
         startActivity(intent);
     }
+
+    private void backtoHome() {
+        Intent intent = new Intent(ViewVaccines.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
 
     public void showData() {
 

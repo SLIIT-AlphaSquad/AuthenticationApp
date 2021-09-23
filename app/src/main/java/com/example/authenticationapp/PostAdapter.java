@@ -38,10 +38,10 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel,PostAdapter.V
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull PostModel model) {
 
-            holder.tvcourseID.setText(model.getCourseId());
-            holder.tvcourseNM.setText(model.getCourseName());
-            holder.tvcourseFee.setText(model.getCourseFee());
-            holder.tvcourseDuration.setText(model.getCourseDuration());
+            holder.tvDescription.setText(model.getDescription());
+            holder.tvCategory.setText(model.getCategory());
+            holder.tvTelephonenumber.setText(model.getTelephonenumber());
+            holder.tvPrice.setText(model.getPrice());
 
             String imageUri=model.getImage();
 
@@ -82,28 +82,28 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel,PostAdapter.V
                             .create();
                                 View holderView = dialog.getHolderView();
 
-                    EditText id = holderView.findViewById(R.id.update_id);
-                    EditText name = holderView.findViewById(R.id.update_name);
-                    EditText fee = holderView.findViewById(R.id.update_fee);
-                    EditText duration = holderView.findViewById(R.id.update_duration);
+                    EditText description = holderView.findViewById(R.id.update_id);
+                    EditText category = holderView.findViewById(R.id.update_name);
+                    EditText telephonenumber = holderView.findViewById(R.id.update_fee);
+                    EditText price = holderView.findViewById(R.id.update_duration);
                     Button btnUpdate=holderView.findViewById(R.id.btnupdate);
 
 
 
-                    id.setText(model.getCourseId());
-                    name.setText(model.getCourseName());
-                    fee.setText(model.getCourseFee());
-                    duration.setText(model.getCourseDuration());
+                    description.setText(model.getDescription());
+                    category.setText(model.getCategory());
+                    telephonenumber.setText(model.getTelephonenumber());
+                    price.setText(model.getPrice());
 
                         btnUpdate.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
 
                                 Map<String, Object> map= new HashMap<>();
-                                map.put("courseId",id.getText().toString());
-                                map.put("courseName",name.getText().toString());
-                                map.put("courseFee",fee.getText().toString());
-                                map.put("courseDuration",duration.getText().toString());
+                                map.put("Description",description.getText().toString());
+                                map.put("Category",category.getText().toString());
+                                map.put("Telephonenumber",telephonenumber.getText().toString());
+                                map.put("Price",price.getText().toString());
 
                                 FirebaseDatabase.getInstance().getReference().child("Pet")
                                         .child(getRef(position).getKey())
@@ -135,16 +135,19 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel,PostAdapter.V
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvcourseID,tvcourseNM,tvcourseFee,tvcourseDuration;
+
+
+
+        TextView tvDescription,tvCategory,tvTelephonenumber,tvPrice;
         ImageView imageAdd,update,delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvcourseID = itemView.findViewById(R.id.tv_courseIdRetrive);
-            tvcourseNM = itemView.findViewById(R.id.tv_courseNameRetrive);
-            tvcourseFee = itemView.findViewById(R.id.tv_courseFeeRetrive);
-            tvcourseDuration = itemView.findViewById(R.id.tv_courseDurationRetrive);
+            tvDescription = itemView.findViewById(R.id.tv_courseIdRetrive);
+            tvCategory = itemView.findViewById(R.id.tv_courseNameRetrive);
+            tvTelephonenumber = itemView.findViewById(R.id.tv_courseFeeRetrive);
+            tvPrice = itemView.findViewById(R.id.tv_courseDurationRetrive);
             imageAdd = itemView.findViewById(R.id.image_ViewCourse);
             update=itemView.findViewById(R.id.image_edit);
             delete=itemView.findViewById(R.id.image_delete);

@@ -157,7 +157,6 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:onClick="donatepet"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/pets1"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -190,6 +189,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="addMedi"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/medii"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -240,6 +240,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="addFood"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/fooood"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -272,6 +273,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="addEquipment"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/eqip"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -323,6 +325,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="addToy"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/toys2"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -354,6 +357,7 @@
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
                     android:backgroundTint="#00FFFFFF"
+                    android:onClick="addWanted"
                     android:scaleType="centerInside"
                     app:srcCompat="@drawable/wantedpets"
                     tools:ignore="SpeakableTextPresentCheck" />

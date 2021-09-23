@@ -22,11 +22,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class DonatePet_Activity extends AppCompatActivity {
+public class Food_Activity extends AppCompatActivity {
 
     ImageButton imageButton;
     EditText description,category,telephonenumber,price;
-    Button btnaddcourse, btnshowcourse,btn_backhome;
+    Button btnaddcourse, btnshowcourse;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
     StorageReference mStorage;
@@ -34,12 +34,6 @@ public class DonatePet_Activity extends AppCompatActivity {
     private static final int Gallery_code = 1;
     private Uri imageUri=null;
     ProgressDialog mprograss;
-
-    //Login l = new Login();
-    //EditText email=l.getmEmail();
-
-
-
 
 
     @Override
@@ -52,13 +46,13 @@ public class DonatePet_Activity extends AppCompatActivity {
         category=findViewById(R.id.edt_courseName);
         telephonenumber=findViewById(R.id.edt_courseFees);
         price=findViewById(R.id.edt_courseDuration);
-        btn_backhome=findViewById(R.id.btn_backhome);
+
         mprograss=new ProgressDialog(this);
 
         btnaddcourse=findViewById(R.id.btn_addedMedicine);
         btnshowcourse=findViewById(R.id.btn_showMedicine);
         mDatabase=FirebaseDatabase.getInstance();
-        mRef=mDatabase.getReference().child("Pet");
+        mRef=mDatabase.getReference().child("Food");
         mStorage= FirebaseStorage.getInstance().getReference();
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -72,17 +66,7 @@ public class DonatePet_Activity extends AppCompatActivity {
             }
 
         });
-        btn_backhome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BackToHome();
-            }
-        });
-    }
 
-    private void BackToHome() {
-        Intent intent = new Intent(DonatePet_Activity.this, MainActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -117,9 +101,7 @@ public class DonatePet_Activity extends AppCompatActivity {
                             Task<Uri> downloadUrl = taskSnapshot.getStorage().getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Uri> task) {
-
                                     String t = task.getResult().toString();
-
                                     DatabaseReference newPost=mRef.push();
 
                                     newPost.child("Description").setValue(descr);
@@ -131,7 +113,7 @@ public class DonatePet_Activity extends AppCompatActivity {
                                     mprograss.dismiss();
 
 
-                                    Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+                                    Intent intent = new Intent(Food_Activity.this,RecycleViewFood.class);
                                     startActivity(intent);
 
 
@@ -144,10 +126,8 @@ public class DonatePet_Activity extends AppCompatActivity {
         }));
     }
     public void sendMesssage(View view){
-        Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+        Intent intent = new Intent(Food_Activity.this,RecycleViewFood.class);
         startActivity(intent);
 
     }
-
-
 }

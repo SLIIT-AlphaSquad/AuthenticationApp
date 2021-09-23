@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecycleViewList">
+    tools:context=".RecyclerViewEquipment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_id"
@@ -29,13 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:clickable="true"
-        android:onClick="addPet"
+
+        android:onClick="AddEquipment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add"
         tools:ignore="SpeakableTextPresentCheck" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

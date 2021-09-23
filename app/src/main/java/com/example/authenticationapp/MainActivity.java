@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ImageButton imageButton;
 
 
     @Override
@@ -28,11 +30,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        imageButton=findViewById(R.id.btn_pet);
         /* Hooks */
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
 
         /* End of hooks */
 
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         return true;
 
                     case R.id.nav_vac:
-                        startActivity(new Intent(MainActivity.this, Vaccination.class));
+                        startActivity(new Intent(MainActivity.this, ViewVaccines.class));
                         //finish();
                         return true;
 
@@ -83,19 +87,56 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         //finish();
                         return true;
 
+                    case R.id.nav_add:
+                        startActivity(new Intent(MainActivity.this, RecyclerViewWanted.class));
+                        //finish();
+                        return true;
+
                 }
                 return true;
             }
         });
 
-
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DonatePet();
+            }
+        });
 
 
 
     }
-    public void donatepet(View view){
-        Intent intent = new Intent(MainActivity.this,DonatePet_Activity.class);
+
+    private void DonatePet() {
+        Intent intent = new Intent(MainActivity.this,RecycleViewList.class);
         startActivity(intent);
+    }
+
+    /*public void donatepet(View view){
+        Intent intent5 = new Intent(MainActivity.this,RecycleViewList.class);
+        startActivity(intent5);
+    }*/
+    public void addMedi(View view){
+        Intent intent6 = new Intent(MainActivity.this,RecycleViewMedicine.class);
+        startActivity(intent6);
+    }
+    public void addFood(View view){
+        Intent intent7 = new Intent(MainActivity.this,RecycleViewFood.class);
+        startActivity(intent7);
+    }
+    public void addEquipment(View view){
+        Intent intent8 = new Intent(MainActivity.this,RecyclerViewEquipment.class);
+        startActivity(intent8);
+    }
+    public void addToy(View view){
+        Intent intent9 = new Intent(MainActivity.this,RecyclerViewYoy.class);
+        startActivity(intent9);
+    }
+
+    public void addWanted(View view){
+        Intent intent22 = new Intent(MainActivity.this,RecyclerViewWanted.class);
+        startActivity(intent22);
     }
 
 
