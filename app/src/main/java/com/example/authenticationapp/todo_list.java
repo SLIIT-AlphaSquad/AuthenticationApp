@@ -154,6 +154,12 @@ public class todo_list extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void toReminder(View view){
+        Intent intent = new Intent(todo_list.this,Reminder.class);
+        startActivity(intent);
+    }
+
+
 
 }
 

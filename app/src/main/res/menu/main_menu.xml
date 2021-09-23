@@ -15,14 +15,27 @@
             android:title="Add" />
 
         <item
+            android:id="@+id/nav_todo"
+            android:icon="@drawable/ic_todo"
+            android:title="To-Do" />
+
+        <item
             android:id="@+id/nav_vac"
             android:icon="@drawable/ic_vac"
             android:title="Vaccination" />
 
         <item
-            android:id="@+id/nav_todo"
-            android:icon="@drawable/ic_todo"
-            android:title="To-Do" />
+            android:id="@+id/nav_bmi"
+            android:icon="@drawable/ic_bmi"
+            android:title="View BMI"/>
+
+        <item
+            android:id="@+id/nav_converter"
+            android:icon="@drawable/ic_convert"
+            android:title="oz to kg"/>
+
+
+
 
     </group>
 
@@ -30,10 +43,6 @@
         <item android:title="Profile">
             <menu>
                 <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_login"
-                    android:icon="@drawable/ic_login"
-                    android:title="Login" />
 
                 <item
                     android:id="@+id/nav_profile"
@@ -44,6 +53,7 @@
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/ic_logout"
                     android:title="Logout"/>
+
                 </group>
             </menu>
 

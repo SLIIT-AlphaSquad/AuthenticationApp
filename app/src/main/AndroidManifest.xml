@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthenticationApp">
         <activity
+            android:name=".ViewVaccines"
+            android:exported="true" />
+        <activity
+            android:name=".Vaccination"
+            android:exported="true" />
+        <activity
+            android:name=".ConvertOzToKg"
+            android:exported="true" />
+        <activity
+            android:name=".BMI_Calculator"
+            android:exported="true" />
+        <activity
+            android:name=".Reminder"
+            android:exported="true" />
+        <activity
             android:name=".verification"
             android:exported="true" />
         <activity
@@ -34,8 +49,7 @@
         </activity>
         <activity
             android:name=".Register"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".RecycleViewList"
             android:exported="true"
@@ -49,6 +63,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".AlarmReciever" />
     </application>
 
 </manifest>

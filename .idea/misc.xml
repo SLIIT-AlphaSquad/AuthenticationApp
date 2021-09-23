@@ -5,19 +5,25 @@
       <map>
         <entry key="..\:/AuthenticationApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19947916666666668" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.1" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_bmi_calculator.xml" value="0.22" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_convert_oz_to_kg.xml" value="0.22" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_donate_pet.xml" value="0.18" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_login.xml" value="0.19746376811594202" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_main.xml" value="0.189873417721519" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_recycle_view_list.xml" value="0.18333333333333332" />
-        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_show.xml" value="0.16458333333333333" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_reminder.xml" value="0.21" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_show.xml" value="0.25" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_todo.xml" value="0.182518115942029" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_todo_list.xml" value="0.25" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_vaccination.xml" value="0.18" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_verification.xml" value="0.17798913043478262" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/activity_view_vaccines.xml" value="0.1" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/content.xml" value="0.14402173913043478" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/desgin_row_for_recyclerview.xml" value="0.25" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/header.xml" value="0.20833333333333334" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/layout/item.xml" value="0.17798913043478262" />
+        <entry key="..\:/AuthenticationApp/app/src/main/res/layout/vaccines.xml" value="0.1" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/menu/main_menu.xml" value="0.22" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/menu/searchbar.xml" value="0.18333333333333332" />
         <entry key="..\:/AuthenticationApp/app/src/main/res/menu/searchbar_menu.xml" value="0.20833333333333334" />
@@ -36,5 +42,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
