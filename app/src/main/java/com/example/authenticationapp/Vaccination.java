@@ -88,7 +88,6 @@ public class Vaccination extends AppCompatActivity {
                     String id = UUID.randomUUID().toString();
                     saveToFireStore(id, name, date, desc, got);
                 }
-
             }
 
             private void updateToFireStore(String id, String name, String date, String desc, String got) {

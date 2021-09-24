@@ -35,5 +35,7 @@
 
     <color name="backtotodobg">#BA4EB38F</color>
 
+    <color name="backgroundColor">#ff7f7f</color>
+
 
 </resources>

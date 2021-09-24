@@ -26,7 +26,7 @@ public class Medicine_Activity extends AppCompatActivity {
 
     ImageButton imageButton;
     EditText description,category,telephonenumber,price;
-    Button btnaddcourse, btnshowcourse;
+    Button btnaddcourse, btnshowcourse,btn_backhome;
     FirebaseDatabase mDatabase;
     DatabaseReference mRef;
     StorageReference mStorage;
@@ -41,6 +41,7 @@ public class Medicine_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate_pet);
 
+        btn_backhome=findViewById(R.id.btn_backhome);
         imageButton =findViewById(R.id.btn_courseImagBtn);
         description=findViewById(R.id.edt_courseId);
         category=findViewById(R.id.edt_courseName);
@@ -67,6 +68,18 @@ public class Medicine_Activity extends AppCompatActivity {
 
         });
 
+        btn_backhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BackToHome();
+            }
+        });
+
+    }
+
+    private void BackToHome() {
+        Intent intent = new Intent(Medicine_Activity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -41,11 +41,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="180dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="16dp"
             android:background="@color/white"
             android:orientation="vertical"
             android:paddingTop="22dp"
@@ -53,12 +53,12 @@
 
             <TextView
                 android:id="@+id/addtitle"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="Vaccine Name"
-                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Vaccine Name"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et_vname"
@@ -67,17 +67,16 @@
                 android:ems="10"
                 android:hint="Vaccine Name"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
-                />
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/adddate"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="Date"
-                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et_date"
@@ -86,35 +85,34 @@
                 android:ems="10"
                 android:hint="Date"
                 android:inputType="date"
-                android:minHeight="48dp"
-                />
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/adddesc"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="Description"
-                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et_des"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Description"
                 android:inputType="textMultiLine"
-                android:minHeight="48dp"
-                android:hint="Description" />
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/addgot"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:text="Got the Vaccince or not yet"
-                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Got the Vaccince or not yet"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et_got"
@@ -123,8 +121,7 @@
                 android:ems="10"
                 android:hint="Got/Not Yet"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
-                />
+                android:minHeight="48dp" />
 
 
             <LinearLayout

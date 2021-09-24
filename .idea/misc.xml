@@ -34,6 +34,7 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_bmi_calculator.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_donate_pet.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_food.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_loading.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_main.xml" value="0.4165781083953241" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_recycle_view_food.xml" value="0.20416666666666666" />
@@ -43,7 +44,9 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_recycler_view_wanted.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_recycler_view_yoy.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_show.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_toy.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_vaccination.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_verification.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_view_vaccines.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_wanted.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/content.xml" value="0.20416666666666666" />
