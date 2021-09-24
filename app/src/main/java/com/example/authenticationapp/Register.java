@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity {
     Button mRegisterBtn;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
-    //FirebaseFirestore fStore;
+    FirebaseFirestore fStore;
     ProgressBar progressBar;
     String userID/*,fullName,phone*/;
 
@@ -53,7 +53,7 @@ public class Register extends AppCompatActivity {
         mLoginBtn=findViewById(R.id.textView4);
 
         fAuth=FirebaseAuth.getInstance();
-        //fStore=FirebaseFirestore.getInstance();
+        fStore=FirebaseFirestore.getInstance();
         //userID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
         progressBar=findViewById(R.id.progressBar);
 
@@ -69,6 +69,8 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
+                String fullName = mFullName.getText().toString();
+                String phone = mPhone.getText().toString();
 
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("Email is required!");
@@ -84,37 +86,56 @@ public class Register extends AppCompatActivity {
                     mPassword.setError("Password must be at least in the length of 6");
                     return;
                 }
+                if(phone.length()<10 || phone.length()>10){
+                    mPhone.setError("Phone number must be in 10 digits");
+                }
 
                 progressBar.setVisibility(View.VISIBLE);
 
                 //Register the user to the firebase
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener((task)-> {
 
-                            if(task.isSuccessful()){
+                    if(task.isSuccessful()){
 
-                                //send verification link
-                                FirebaseUser fuser=fAuth.getCurrentUser();
-                                fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void aVoid) {
-                                        Toast.makeText(Register.this, "Verification email has sent", Toast.LENGTH_SHORT).show();
-                                    }
-                                }).addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Log.d(TAG,"onFailure: Email not sent "+e.getMessage());
-                                        }
-                                });
-
-
-                                Toast.makeText(Register.this,"User created",Toast.LENGTH_SHORT).show();
-
-
-                                startActivity(new Intent(getApplicationContext(),verification.class)); //Main activity is the home
-                            }else{
-                                Toast.makeText(Register.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
+                        //send verification link
+                        FirebaseUser fuser=fAuth.getCurrentUser();
+                        fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(Register.this, "Verification email has sent", Toast.LENGTH_SHORT).show();
                             }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d(TAG,"onFailure: Email not sent "+e.getMessage());
+                            }
+                        });
+
+
+                        Toast.makeText(Register.this,"User created",Toast.LENGTH_SHORT).show();
+                        userID=fAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = fStore.collection("users").document(userID);
+                        Map<String,Object>user= new HashMap<>();
+                        user.put("fName",fullName);
+                        user.put("email",email);
+                        user.put("phone",phone);
+                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d(TAG,"onSuccess: user profile created for "+userID);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.d(TAG,"onFailure: "+e.toString());
+                            }
+                        });
+
+                        startActivity(new Intent(getApplicationContext(),verification.class)); //Main activity is the home
+                    }else{
+                        Toast.makeText(Register.this,"Error!"+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
 
                 });
             }

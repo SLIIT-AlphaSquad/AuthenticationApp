@@ -14,28 +14,26 @@
         android:layout_height="91dp"
         app:layout_constraintBottom_toTopOf="@+id/create"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999"
+        app:layout_constraintVertical_bias="0.707"
         app:srcCompat="@drawable/petme" />
-
 
     <TextView
         android:id="@+id/create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="sans-serif"
         android:text="Create new Account!"
-        android:textStyle="bold"
         android:textColor="@color/todosavebg"
         android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fullName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/fullName"
@@ -43,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginBottom="460dp"
         android:background="#5C878282"
         android:ems="10"
         android:fontFamily="sans-serif"
