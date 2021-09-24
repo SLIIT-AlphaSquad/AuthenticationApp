@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class RecycleViewFood extends AppCompatActivity {
     RecyclerView recyclerView;
     PostFoodAdapter adapter;
     SearchView searchView;
-
+    Button backHome;
 
 
     @Override
@@ -31,7 +32,14 @@ public class RecycleViewFood extends AppCompatActivity {
         recyclerView =findViewById(R.id.recyclerView_id);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         searchView=findViewById(R.id.app_bar_search);
+        backHome = findViewById(R.id.backHome);
 
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backtoHome();
+            }
+        });
 
         FirebaseRecyclerOptions<PostModel> options= new FirebaseRecyclerOptions.Builder<PostModel>()
                 .setQuery(FirebaseDatabase.getInstance()
@@ -41,6 +49,11 @@ public class RecycleViewFood extends AppCompatActivity {
 
         adapter=new PostFoodAdapter(options,this);
         recyclerView.setAdapter(adapter);
+    }
+
+    private void backtoHome() {
+        Intent intent = new Intent(RecycleViewFood.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void AddFood(View view){

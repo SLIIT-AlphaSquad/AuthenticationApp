@@ -92,6 +92,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         //finish();
                         return true;
 
+                    case R.id.nav_addItems:
+                        startActivity(new Intent(MainActivity.this, Add_Activity.class));
+                        //finish();
+                        return true;
+
                 }
                 return true;
             }

@@ -46,8 +46,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vaccine_rv"
-        android:layout_width="400dp"
-        android:layout_height="626dp"
+        android:layout_width="410dp"
+        android:layout_height="623dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
