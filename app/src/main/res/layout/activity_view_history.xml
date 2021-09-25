@@ -64,13 +64,9 @@
         app:srcCompat="@drawable/addbtns" />
 
     <LinearLayout
-<<<<<<< HEAD
-        android:layout_width="407dp"
-        android:layout_height="461dp"
-=======
-        android:layout_width="412dp"
-        android:layout_height="392dp"
->>>>>>> origin/main
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+
         android:alpha="0.9"
         android:background="@color/white"
         android:orientation="vertical"
@@ -104,11 +100,7 @@
             android:layout_marginTop="10dp"
             android:alpha="1"
             android:backgroundTint="#ffb6b4"
-<<<<<<< HEAD
             android:onClick="viewMedicinePosts"
-=======
-            android:onClick="addMedicinePosts"
->>>>>>> origin/main
             android:text="Added Medicine "
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -133,16 +125,12 @@
             android:id="@+id/add_addequipemnts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
+
             android:layout_marginTop="10dp"
             android:alpha="1"
             android:backgroundTint="#F8E2DA"
             android:onClick="viewEquipPosts"
-=======
-            android:alpha="1"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#fff0eb"
->>>>>>> origin/main
+
             android:text="Added Equipment"
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -153,7 +141,6 @@
             android:id="@+id/add_addtoys"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:layout_marginTop="10dp"
             android:alpha="1"
             android:backgroundTint="#FAE1E1"
@@ -169,16 +156,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:alpha="1"
-            android:backgroundTint="#FAF1F1"
+            android:backgroundTint="#ffffff"
             android:onClick="viewWantedPosts"
             android:text="Added Wanted Posts"
-=======
-            android:alpha="1"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#ffffff"
-            android:text="Added Toys"
->>>>>>> origin/main
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp"
