@@ -10,7 +10,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="74dp"
-        android:background="#ff7f7f"
+        android:background="#FF7979"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,9 +41,9 @@
         android:id="@+id/backHome"
         android:layout_width="84dp"
         android:layout_height="48dp"
-        android:layout_marginRight="350dp"
+        android:layout_marginRight="300dp"
         android:backgroundTint="@color/inputbg"
-        android:onClick="home"
+        android:onClick="logout"
         android:text="LOGOUT"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
@@ -59,9 +59,9 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@mipmap/ic_launcher" />
@@ -70,13 +70,14 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="264dp"
         android:background="@color/white"
         android:orientation="vertical"
         android:padding="40dp"
         android:paddingTop="22dp"
         android:paddingBottom="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileimage"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
@@ -107,7 +108,7 @@
                 android:id="@+id/profilename"
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
-                android:text="name"
+                android:hint="Name"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -143,7 +144,7 @@
                 android:id="@+id/profileemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="name"
+                android:hint="Email"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -179,7 +180,7 @@
                 android:id="@+id/profilephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="name"
+                android:hint="PhoneNo"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -192,10 +193,11 @@
         android:id="@+id/changeproBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#9EFF7979"
         android:text="Change Profile Picture"
-        android:backgroundTint="@color/todosavebg"
-        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/resetBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/resetBtn" />
@@ -204,13 +206,17 @@
         android:id="@+id/resetBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/verifybg"
         android:text="RESET PASSWORD"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/viewposts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.974" />
 
     <Button
         android:id="@+id/button"
@@ -220,10 +226,25 @@
         android:backgroundTint="@color/deletebg"
         android:onClick="home"
         android:text="HOME"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/resetBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/resetBtn" />
+
+    <Button
+        android:id="@+id/viewposts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#A9FF7979"
+        android:onClick="viewHistory"
+        android:text="View History"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/changeproBtn"
+        app:layout_constraintEnd_toEndOf="@+id/changeproBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/changeproBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

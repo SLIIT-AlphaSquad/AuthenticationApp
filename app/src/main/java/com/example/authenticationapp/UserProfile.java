@@ -32,9 +32,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 public class UserProfile extends AppCompatActivity {
 
-    TextView fullName,email,phone;
+    TextView fullName, email, phone;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -49,30 +51,29 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
-        fullName=findViewById(R.id.profilename);
-        email=findViewById(R.id.profileemail);
-        phone=findViewById(R.id.profilephone);
-        profileimage=findViewById(R.id.profileimage);
-        changeproBtn=findViewById(R.id.changeproBtn);
-        resetPassLocal=findViewById(R.id.resetBtn);
+        fullName = findViewById(R.id.profilename);
+        email = findViewById(R.id.profileemail);
+        phone = findViewById(R.id.profilephone);
+        profileimage = findViewById(R.id.profileimage);
+        changeproBtn = findViewById(R.id.changeproBtn);
+        resetPassLocal = findViewById(R.id.resetBtn);
 
-        fAuth=FirebaseAuth.getInstance();
-        fStore=FirebaseFirestore.getInstance();
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
 
-        userId=fAuth.getCurrentUser().getUid();
-        user =fAuth.getCurrentUser();
+        userId = fAuth.getCurrentUser().getUid();
+        user = fAuth.getCurrentUser();
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
         //StorageReference profileRef = storageReference.child("Profile.jpg");
-        StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/Profile");
+        StorageReference profileRef = storageReference.child("users/" + fAuth.getCurrentUser().getUid() + "/Profile");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(profileimage);
             }
         });
-
 
 
         DocumentReference documentReference = fStore.collection("users").document(userId);
@@ -90,7 +91,7 @@ public class UserProfile extends AppCompatActivity {
             public void onClick(View v) {
                 //Open gallery
                 Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGalleryIntent,1000);
+                startActivityForResult(openGalleryIntent, 1000);
             }
         });
 
@@ -156,7 +157,7 @@ public class UserProfile extends AppCompatActivity {
     private void uploadImageToFireBase(Uri imageUri) {
         //upload image to firebase storage
         //StorageReference fileRef = storageReference.child("Profile.jpg");
-        StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/Profile");
+        StorageReference fileRef = storageReference.child("users/" + fAuth.getCurrentUser().getUid() + "/Profile");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -175,15 +176,18 @@ public class UserProfile extends AppCompatActivity {
         });
     }
 
-    public void logout(View view){
+    public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),Login.class));
+        startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
     }
 
-    public void home(View view){
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(UserProfile.this,MainActivity.class));
-        finish();
+    public void viewHistory(View view) {
+        startActivity(new Intent(UserProfile.this, ViewHistory.class));
+    }
+
+
+    public void home(View view) {
+        startActivity(new Intent(UserProfile.this, MainActivity.class));
     }
 }

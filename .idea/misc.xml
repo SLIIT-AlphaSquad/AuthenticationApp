@@ -30,6 +30,22 @@
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_login.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_main.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Pavani/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_add.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_donate_pet.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_loading.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_recycle_view_list.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_food_posts.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_food_profile.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_medicine_posts.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_medicine_profile.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_pet_profile.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_posts.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_user_profile.xml" value="0.22" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/activity_view_history.xml" value="0.1" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/desgin_row_for_recyclerview.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/prifile_desgin.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/layout/profile_desgin.xml" value="0.17543859649122806" />
+        <entry key="..\:/Users/Pavani/Desktop/AuthenticationApp/app/src/main/res/menu/main_menu.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_add.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_bmi_calculator.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AuthenticationApp/app/src/main/res/layout/activity_donate_pet.xml" value="0.20416666666666666" />
