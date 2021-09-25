@@ -1,5 +1,9 @@
 package com.example.authenticationapp;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,10 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,7 +22,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class DonatePet_Activity extends AppCompatActivity {
+public class userToysProfile extends AppCompatActivity {
+
 
     ImageButton imageButton;
     EditText description,category,telephonenumber,price;
@@ -36,11 +37,11 @@ public class DonatePet_Activity extends AppCompatActivity {
     private Uri imageUri=null;
     ProgressDialog mprograss;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate_pet);
+
 
         imageButton =findViewById(R.id.btn_courseImagBtn);
         description=findViewById(R.id.edt_courseId);
@@ -53,7 +54,7 @@ public class DonatePet_Activity extends AppCompatActivity {
         btnaddcourse=findViewById(R.id.btn_addedMedicine);
         btnshowcourse=findViewById(R.id.btn_showMedicine);
         mDatabase=FirebaseDatabase.getInstance();
-        mRef=mDatabase.getReference().child("Pet");
+        mRef=mDatabase.getReference().child("Toy");
         mRef1=mDatabase.getReference().child("User");
         mStorage= FirebaseStorage.getInstance().getReference();
 
@@ -77,7 +78,7 @@ public class DonatePet_Activity extends AppCompatActivity {
     }
 
     private void BackToHome() {
-        Intent intent = new Intent(DonatePet_Activity.this, MainActivity.class);
+        Intent intent = new Intent(userToysProfile.this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -136,7 +137,7 @@ public class DonatePet_Activity extends AppCompatActivity {
                                     mprograss.dismiss();
 
 
-                                    Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+                                    Intent intent = new Intent(userToysProfile.this,RecyclerViewYoy.class);
                                     startActivity(intent);
 
 
@@ -149,7 +150,7 @@ public class DonatePet_Activity extends AppCompatActivity {
         }));
     }
     public void sendMesssage(View view){
-        Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+        Intent intent = new Intent(userToysProfile.this,RecycleViewList.class);
         startActivity(intent);
 
     }

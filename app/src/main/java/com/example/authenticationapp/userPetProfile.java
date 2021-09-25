@@ -22,8 +22,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class DonatePet_Activity extends AppCompatActivity {
-
+public class userPetProfile extends AppCompatActivity {
     ImageButton imageButton;
     EditText description,category,telephonenumber,price;
     Button btnaddcourse, btnshowcourse,btn_backhome;
@@ -77,7 +76,7 @@ public class DonatePet_Activity extends AppCompatActivity {
     }
 
     private void BackToHome() {
-        Intent intent = new Intent(DonatePet_Activity.this, MainActivity.class);
+        Intent intent = new Intent(userPetProfile.this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -136,7 +135,7 @@ public class DonatePet_Activity extends AppCompatActivity {
                                     mprograss.dismiss();
 
 
-                                    Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+                                    Intent intent = new Intent(userPetProfile.this,RecycleViewList.class);
                                     startActivity(intent);
 
 
@@ -149,7 +148,7 @@ public class DonatePet_Activity extends AppCompatActivity {
         }));
     }
     public void sendMesssage(View view){
-        Intent intent = new Intent(DonatePet_Activity.this,RecycleViewList.class);
+        Intent intent = new Intent(userPetProfile.this,RecycleViewList.class);
         startActivity(intent);
 
     }

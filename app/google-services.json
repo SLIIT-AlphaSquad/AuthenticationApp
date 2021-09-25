@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "538524285381",
+    "firebase_url": "https://authenticationapp-36c4c-default-rtdb.firebaseio.com",
     "project_id": "authenticationapp-36c4c",
     "storage_bucket": "authenticationapp-36c4c.appspot.com"
   },

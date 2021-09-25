@@ -60,15 +60,18 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel,PostAdapter.V
                                     Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_SHORT).show();
                                 }
                             });
+
+                FirebaseDatabase.getInstance().getReference().child("User")
+                        .child(getRef(position).getKey())
+                        .removeValue()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(context, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        });
             }
         });
-
-
-
-
-
-
-
 
             holder.update.setOnClickListener(new View.OnClickListener(){
 
@@ -113,17 +116,30 @@ public class PostAdapter extends FirebaseRecyclerAdapter<PostModel,PostAdapter.V
                                         dialog.dismiss();
                                     }
                                 });
+
+
+                                Map<String, Object> map1= new HashMap<>();
+                                map1.put("Description",description.getText().toString());
+                                map1.put("Category",category.getText().toString());
+                                map1.put("Telephonenumber",telephonenumber.getText().toString());
+                                map1.put("Price",price.getText().toString());
+
+
+                                FirebaseDatabase.getInstance().getReference().child("User")
+                                        .child(getRef(position).getKey())
+                                        .updateChildren(map1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        dialog.dismiss();
+                                    }
+                                });
                             }
                         });
 
                     dialog.show();
                 }
             });
-
-
-
-
-    }
+}
 
 
     @Override
