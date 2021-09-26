@@ -64,9 +64,8 @@
         app:srcCompat="@drawable/addbtns" />
 
     <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="500dp"
-
+        android:layout_width="407dp"
+        android:layout_height="461dp"
         android:alpha="0.9"
         android:background="@color/white"
         android:orientation="vertical"
@@ -125,12 +124,10 @@
             android:id="@+id/add_addequipemnts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="10dp"
             android:alpha="1"
             android:backgroundTint="#F8E2DA"
             android:onClick="viewEquipPosts"
-
             android:text="Added Equipment"
             android:textAllCaps="false"
             android:textColor="@color/black"
@@ -156,7 +153,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#ffffff"
+            android:alpha="1"
+            android:backgroundTint="#FAF1F1"
             android:onClick="viewWantedPosts"
             android:text="Added Wanted Posts"
             android:textAllCaps="false"

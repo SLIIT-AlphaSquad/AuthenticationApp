@@ -12,6 +12,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthenticationApp">
         <activity
+            android:name=".UserWantedProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserWantedPosts"
+            android:exported="true" />
+        <activity
+            android:name=".userEquipProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserEquipPosts"
+            android:exported="true" />
+        <activity
+            android:name=".userToysProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserToysPosts"
+            android:exported="true" />
+        <activity
+            android:name=".UserMedicinePosts"
+            android:exported="true" />
+        <activity
+            android:name=".userMedicineProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserFoodPosts"
+            android:exported="true" />
+        <activity
+            android:name=".userFoodProfile"
+            android:exported="true" />
+        <activity
+            android:name=".userPetProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ViewHistory"
+            android:exported="true" />
+        <activity
+            android:name=".UserPosts"
+            android:exported="true" />
+        <activity
+            android:name=".Loading"
+            android:exported="true"/>
+        <activity
             android:name=".UserProfile"
             android:exported="true" />
         <activity
@@ -60,17 +102,16 @@
             android:name=".Wanted_Activity"
             android:exported="true" />
         <activity
-            android:name=".Loading"
+            android:name=".Login"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".Login"
-            android:exported="true"></activity>
         <activity
             android:name=".Register"
             android:exported="true" />
@@ -100,7 +141,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <receiver android:name=".AlarmReciever" />
     </application>

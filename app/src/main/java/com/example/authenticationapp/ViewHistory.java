@@ -22,7 +22,6 @@ public class ViewHistory extends AppCompatActivity {
         startActivity(new Intent(ViewHistory.this, UserFoodPosts.class));
     }
 
-
     public void viewMedicinePosts(View view) {
         startActivity(new Intent(ViewHistory.this, UserMedicinePosts.class));
     }
@@ -38,9 +37,4 @@ public class ViewHistory extends AppCompatActivity {
     public void viewWantedPosts(View view) {
         startActivity(new Intent(ViewHistory.this, UserWantedPosts.class));
     }
-
-    public void addMedicinePosts(View view) {
-        startActivity(new Intent(ViewHistory.this, UserMedicinePosts.class));
-    }
-
 }
